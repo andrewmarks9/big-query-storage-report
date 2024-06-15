@@ -11,6 +11,12 @@ Google Cloud SDK: The script uses the bq command-line tool from the Google Cloud
 
 Service Account Key: The script requires a service account key file with the necessary permissions to access BigQuery and Google Sheets. Create a service account and download the key file in JSON format.
 
+Dependencies
+The script relies on the following external tools and libraries:
+
+bq (Google Cloud SDK)
+jq (Command-line JSON processor)
+
 BigQuery Permissions:
 
 bigquery.tables.get - This permission is required to access the INFORMATION_SCHEMA.TABLE_STORAGE_BY_PROJECT system view, which provides storage usage metrics for tables in BigQuery.
@@ -54,8 +60,4 @@ Compression ratios
 Forecast costs for logical and physical storage based on predefined prices per GiB
 The query filters the results to include only base tables, as these typically provide the most accurate storage usage information. The results are ordered by the sum of active logical and physical forecast costs in descending order.
 
-Dependencies
-The script relies on the following external tools and libraries:
 
-bq (Google Cloud SDK)
-jq (Command-line JSON processor)
