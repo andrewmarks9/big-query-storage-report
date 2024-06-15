@@ -4,21 +4,6 @@ Big Query Storage Report
 BigQuery Storage Report Script
 This Bash script is designed to generate a report on the storage usage and forecast costs for datasets across multiple Google Cloud Platform (GCP) projects. The report is generated using a BigQuery query and the results are appended to a Google Sheets spreadsheet.
 
-The script will perform the following steps:
-
-Log the start time in the specified log file.
-Execute a BigQuery query for each project in the projects array. The query retrieves storage usage metrics and forecast costs for datasets in the project.
-Extract the query results as CSV rows.
-Authenticate with the Google Sheets API using the provided service account key file.
-Append the CSV rows to a worksheet in the specified Google Sheets spreadsheet.
-
-Query Details
-The BigQuery query used in the script retrieves the following information for each dataset:
-
-Logical and physical storage sizes (active and long-term)
-Compression ratios
-Forecast costs for logical and physical storage based on predefined prices per GiB
-
 Prerequisites
 Before running the script, ensure that you have the following:
 
@@ -65,8 +50,8 @@ Log the start time in the specified log file.
 Execute a BigQuery query for each project in the projects array. The query retrieves storage usage metrics and forecast costs for datasets in the project.
 Extract the query results as CSV rows.
 Authenticate with the Google Sheets API using the provided service account key file.
-Append the CSV rows to a worksheet in the specified Google Sheets spreadsheet. The worksheet name will be <project>_results.
-Log any errors or success messages.
+Append the CSV rows to a worksheet in the specified Google Sheets spreadsheet.
+
 Query Details
 The BigQuery query used in the script retrieves the following information for each dataset:
 
